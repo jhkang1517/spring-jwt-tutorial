@@ -3,28 +3,28 @@ spring:
     pathmatch:
       matching-strategy: ant_path_matcher
 
+  h2:
+    console:
+      enabled: true
+
+  datasource:
+    url: jdbc:h2:mem:testdb;NON_KEYWORDS=USER
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
   jpa:
     show_sql: true
-    open-in-view: false
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     properties:
       hibernate:
         format_sql: true
+        show_sql: true
+    defer-datasource-initialization: true
 
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/postgres
-    username: postgres
-    password: postgres
-
-
-
-  sql:
-    init:
-      mode: always
-      schema-locations: classpath*:db/schema.sql
-#      data-locations: classpath*:db/data.sql
-
+logging:
+  level:
+    com.blackswitch: DEBUG
 
