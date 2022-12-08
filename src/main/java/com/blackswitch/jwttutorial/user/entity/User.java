@@ -1,10 +1,7 @@
 package com.blackswitch.jwttutorial.user.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AccessLevel;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -12,12 +9,13 @@ import java.util.Set;
 @Entity
 @Table(name = "user")
 @Getter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JsonIgnore
     @Column(name = "user_id")
     private Long userId;
 
@@ -43,13 +41,13 @@ public class User {
     )
     private Set<Authority> authorities;
 
-    @Builder
-    public User (Long userId, String username, String password, String nickname, boolean activated, Set<Authority> authorities) {
-        this.userId = userId;
-        this.username = username;
-        this.password = password;
-        this.nickname = nickname;
-        this.activated = activated;
-        this.authorities = authorities;
-    }
+//    @Builder
+//    public User (Long userId, String username, String password, String nickname, boolean activated, Set<Authority> authorities) {
+//        this.userId = userId;
+//        this.username = username;
+//        this.password = password;
+//        this.nickname = nickname;
+//        this.activated = activated;
+//        this.authorities = authorities;
+//    }
 }

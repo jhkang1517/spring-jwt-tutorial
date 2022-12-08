@@ -28,3 +28,9 @@ logging:
   level:
     com.blackswitch: DEBUG
 
+jwt:
+  header: Authorization
+  secret: YmxhY2tzd2l0Y2gtdGVjaC1zcHJpbmctYm9vdC1qd3QtdHV0b3JpYWwtc2VjcmV0LWJsYWNrc3dpdGNoLXRlY2gtc3ByaW5nLWJvb3Qtand0LXR1dG9yaWFsLXNlY3JldA==
+  token-validity-in-seconds: 86400
+
+
