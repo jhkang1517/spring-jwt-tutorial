@@ -1,5 +1,6 @@
-package com.blackswitch.jwttutorial.user.entity;
+package com.blackswitch.jwttutorial.domain.user;
 
+import com.blackswitch.jwttutorial.domain.auth.Authority;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 

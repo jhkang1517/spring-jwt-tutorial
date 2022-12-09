@@ -1,4 +1,4 @@
-package com.blackswitch.jwttutorial.sample.controller;
+package com.blackswitch.jwttutorial.domain.sample;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

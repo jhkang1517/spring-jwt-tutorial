@@ -1,4 +1,4 @@
-package com.blackswitch.jwttutorial.user.entity;
+package com.blackswitch.jwttutorial.domain.auth;
 
 import lombok.AccessLevel;
 import lombok.Builder;
